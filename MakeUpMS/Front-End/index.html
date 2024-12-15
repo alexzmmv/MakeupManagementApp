@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Manage Products</title>
+    <style>
+        #search {
+            width: 100%;
+            display: flex;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .swbutton {
+            display: none;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #search-bar {
+            display: block;
+            justify-content: center;
+        }
+
+
+        .swbutton:hover {
+            background-color: #45a049;
+        }
+
+        .swbutton:active {
+            background-color: #3e8e41;
+        }
+
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .product h2 {
+            margin-top: 0;
+        }
+        .product-details {
+            margin-bottom: 10px;
+        }
+        .form-input {
+            margin: 5px 0;
+        }
+        button {
+            margin: 5px;
+        }
+        #toggleButton {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #addProductForm {
+            display: none;
+            margin-top: 20px;
+        }
+
+        #addProductForm .form-input label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #addProductForm .form-input input {
+            padding: 5px;
+            width: 100%;
+        }
+        #addProductForm button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        #search-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Product List</h1>
+
+<div id="search-bar">
+    <input type="text" id="search" placeholder="Search for products..">
+    <button id="search-button" onclick="searchProducts()">Search</button>
+</div>
+<br>
+<button onclick="toggleProducts()" id="toggleButton">Show/Hide Products</button>
+<div id="product-list"></div>
+<div id="product-add-form">
+    <form id="add-product-form">
+
+    </form>
+    <button class="swbutton" id="add-save-button" onclick="saveNewProduct()">Add Product</button>
+    <button class="swbutton" id="add-cancel-button" onclick="toggleProducts()">Cancel</button>
+</div>
+
+</body>
+</html>
